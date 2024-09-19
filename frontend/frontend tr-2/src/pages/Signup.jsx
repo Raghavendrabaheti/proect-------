@@ -16,7 +16,7 @@ function Signup() {
             <label htmlFor='password'>Password</label>
             <input {...register('password')} />
             <button type='Sumbit'>Signup</button>
-
+            <button type='reset'>Reset</button>
         </form>
     </div>
   )
