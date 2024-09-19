@@ -11,6 +11,10 @@ connectDB();
 
 app.use(`/api`,require('./Router/UserRouter'));
 
+app.use((req,res,next)=>{
+    res.status(404).send(`request url ${req.url} not found`);
+       next() 
+    })
 //Global error
 app.use(errorHandler);
 
