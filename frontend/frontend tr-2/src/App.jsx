@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div>
       {/* <p>count:{count}</p> */}
-      <button>Increament</button>
-      <button>Decreament</button>
+      {/* <button>Increament</button>
+      <button>Decreament</button> */}
       <Routes>
         <Route path='/register' element={<Signup />} />
       </Routes>
