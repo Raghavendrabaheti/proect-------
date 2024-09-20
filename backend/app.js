@@ -4,6 +4,9 @@ const app = express();
 const connectDB = require('./db');
 const validator = require('validator');
 const errorHandler = require('./middleware/errorHandle');
+const cors = require('cors');
+
+app.use(cors());
 const PORT =3000;
 app.use(express.json());
 

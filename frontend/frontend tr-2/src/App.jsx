@@ -1,11 +1,15 @@
 import React from 'react'
 import Signup from './pages/Signup'
 import { Routes,Route } from 'react-router-dom'
+import { Toaster } from 'sonner';
 const App = () => {
   return (
-    <Routes>
-      <Route path='/register' element={<Signup />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path='/register' element={<Signup />} />
+      </Routes>
+      <Toaster position="top-right"/>
+    </div>
   )
 }
 
