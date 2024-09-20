@@ -4,14 +4,14 @@ import { Routes,Route } from 'react-router-dom'
 import { Toaster } from 'sonner'; 
 import { useSelector } from 'react-redux';
 const App = () => {
-  const { count } = useSelector((state) => {
-    console.log(state.count);
-    state.count
-  });
+  // const { count } = useSelector((state) => {
+  //   console.log(state.count);
+  //   state.count
+  // });
 
   return (
     <div>
-      <p>count:{count}</p>
+      {/* <p>count:{count}</p> */}
       <button>Increament</button>
       <button>Decreament</button>
       <Routes>
