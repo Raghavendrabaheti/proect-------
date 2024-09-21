@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./counterSlice";
-import { useReducer } from "react";
+import { useReducer } from "./userSlice";
 
 const store = configureStore({
     reducer: {
