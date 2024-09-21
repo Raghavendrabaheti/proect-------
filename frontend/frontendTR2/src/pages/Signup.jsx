@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import axios from 'axios';
 import { toast } from 'sonner';
+import { Signup } from '../redux/userSlice';
 
 // Define the Zod schema for validation
 const schema = z.object({
@@ -25,17 +26,9 @@ function AuthForm() {
     const [isSignUp, setIsSignUp] = useState(false);
 
     // Handle the sign-up form submission
-    const onSubmitSignUp = async (data) => {
-        try {
-            console.log(data);
-            const res = await axios.post('http://localhost:3000/api/register', data);
-            console.log(res);
-            toast.success('User registered successfully');
-            reset(); // Clear form after successful submission
-        } catch (error) {
-            console.error(error);
-            toast.error(error.response.data.message);
-        }
+        const onSubmit =(data) => {
+            console.log('submit is running');
+            dispatch(Signup(data));
     };
 
     // Handle the sign-in form submission
