@@ -5,7 +5,7 @@ import { z } from 'zod'; // Zod schema validation library
 import axios from 'axios'; // For handling API requests
 import { toast } from 'sonner'; // For notifications
 import { useDispatch } from 'react-redux'; // For dispatching Redux actions
-import { Signup, Register } from '../redux/userSlice'; // Redux actions
+import { Signup } from '../redux/userSlice'; // Redux actions
 import './Signup.css'; // Your CSS file for styling
 
 // Define the Zod schema for validation

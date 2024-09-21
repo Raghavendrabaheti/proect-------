@@ -3,7 +3,7 @@ import { createSlice} from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
- export const AuthForm = createAsyncThunk('/user/signup', async (data, { rejectWithValue }) => {
+ export const Signup = createAsyncThunk('/user/signup', async (data, { rejectWithValue }) => {
     try {
         const res = await axios.post('http://localhost:3000/api/register', data);
         return res.data;
@@ -34,6 +34,8 @@ const userSlice = createSlice({
             })
     }
 });
+// Export the action creators
+export const { someAction } = userSlice.actions;
 
 export default userSlice.reducer;
 
