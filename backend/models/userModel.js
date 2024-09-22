@@ -10,17 +10,7 @@ const userSchema = new mongoose.Schema({
         required:[true, "Name is Required"],
         maxLength:[20,"Name cannot exceed40 characters"]
     },
-    email:{
-        type: String,
-        required:[true,"Email is required"],
-        unique:true,
-        validate:{
-            validator: function(value){
-                return validator.isEmail(value);
-            },
-            message:"Please Enter a Valid Email"
-        }
-    },
+    
     phone: {
         type: String,
         required: [true, "Phone no. is required"],
@@ -30,6 +20,17 @@ const userSchema = new mongoose.Schema({
                 return validator.isMobilePhone(value, 'any'); // Use 'any' to support various phone formats
             },
             message: "Please Enter a Valid Phone Number"
+        }
+    },
+    email:{
+        type: String,
+        required:[true,"Email is required"],
+        unique:true,
+        validate:{
+            validator: function(value){
+                return validator.isEmail(value);
+            },
+            message:"Please Enter a Valid Email"
         }
     },
     password:{
