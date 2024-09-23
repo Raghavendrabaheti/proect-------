@@ -44,6 +44,11 @@ const userSchema = new mongoose.Schema({
             },
             message:"Password must contain 1 lowercase"
         }
+    },
+    role:{
+        type:String,
+        enum:['admin','user'],
+        default:'user'
     }
 })
 

@@ -5,6 +5,9 @@ import { z } from 'zod';
 import axios from 'axios';
 import { toast } from 'sonner';
 import './Signup.css';
+import { useDispatch , useSelector} from 'react-redux';
+import { Signup } from '../redux/userSlice';
+import { CircularProgress } from '@mui/material';
 
 // Define Zod schemas for validation
 const registerSchema = z.object({

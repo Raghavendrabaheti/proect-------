@@ -1,5 +1,6 @@
 const User =require('../models/userModel')
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 exports.signUp = async(req,res,next)=>{
     try {
@@ -42,6 +43,9 @@ exports.login = async(req,res,next)=>{
         if(!isPasswordMatch){
             throw new Error("Password do not match,try Again");
         }
+    const token = jwt.sign({id:user._id,name:user.name,user:role},
+        'this-is-my-secret-key',{expiresIn:'30d'});
+
         res.status(200).json({
             message:"User Logged in successfully"
         });

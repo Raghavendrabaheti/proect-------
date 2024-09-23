@@ -19,9 +19,9 @@ export default function App() {
 
   return (
     <div>
-      <p>count:{count}</p>
+      {/* <p>count:{count}</p>
       <button onClick={handleIncreament}>Increament</button>
-      <button onClick={() => dispatch(decrement())}>Decreament</button>
+      <button onClick={() => dispatch(decrement())}>Decreament</button> */}
       <Routes>
         <Route path='/register' element={<Signup />} />
       </Routes>
