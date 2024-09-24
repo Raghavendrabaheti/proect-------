@@ -8,7 +8,7 @@ import './Signup.css';
 import { useDispatch , useSelector} from 'react-redux';
 import { Signup } from '../redux/userSlice';
 import { CircularProgress } from '@mui/material';
-
+import { useNavigate } from 'react-router-dom';
 // Define Zod schemas for validation
 const registerSchema = z.object({
     name: z.string().min(1, "Name is required").max(40, "Name can't exceed 40 characters"),
